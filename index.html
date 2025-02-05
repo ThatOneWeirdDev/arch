@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Arch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Questrial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            margin-top: 0;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            background-color: #f9f9f9;
+        }
+
+        .search-box:focus {
+            border-color: #0073e6;
+        }
+
+        .shortcuts-table {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-collapse: collapse;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        .shortcuts-table th, .shortcuts-table td {
+            padding: 12px;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .shortcuts-table th {
+            background-color: #0073e6;
+            color: white;
+        }
+
+        .shortcuts-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .shortcuts-table td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .search-box {
+                font-size: 1rem;
+                padding: 10px;
+            }
+
+            .shortcuts-table th, .shortcuts-table td {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Arch</h1>
+    <div class="search-container">
+        <input type="text" class="search-box" id="search-bar" placeholder="Search..." onkeydown="if(event.key === 'Enter') search()">
+    </div>
+
+    <table class="shortcuts-table">
+        <thead>
+            <tr>
+                <th>Keyboard Shortcuts</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>⌘⌥+</td>
+                <td>Increase Opacity</td>
+            </tr>
+            <tr>
+                <td>⌘⌥-</td>
+                <td>Decrease Opacity</td>
+            </tr>
+            <tr>
+                <td>⌘H</td>
+                <td>Hide Application</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function search() {
+            var query = document.getElementById('search-bar').value;
+            if (query) {
+                window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
+</body>
+</html>
