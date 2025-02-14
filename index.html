@@ -8,41 +8,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-        font-family: 'Questrial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: url('Purple\ Gradient\ Background.jpeg') no-repeat center center fixed;
-        background-size: cover;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 100vh;
-        overflow-y: auto;
-        text-align: center;
+            font-family: 'Questrial', sans-serif;
+            background: url("Purple%20Gradient%20Background.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            text-align: center;
         }
 
         h1 {
-        	color: white;
-            font-size: 5em;
+            color: white;
+            font-size: 5vw;
             margin-bottom: 20px;
         }
-        
-		::placeholder {
-        	font-size: 1.15rem;
+
+        ::placeholder {
+            font-size: 1.15rem;
             color: black;
         }
+
         .search-container {
-            margin-top: 0;
-            width: 100%;
+            width: 90%;
             max-width: 400px;
             text-align: center;
         }
 
         .search-box {
-        	height: 30%;
             width: 100%;
             padding: 12px;
             font-size: 1.2rem;
@@ -50,6 +53,7 @@
             outline: none;
             border: none;
             background-color: #f2f2f2;
+            height: 50px;
         }
 
         .search-box:focus {
@@ -57,13 +61,13 @@
         }
 
         .shortcuts-table {
-			margin-left: 22.5px;
             margin-top: 20px;
-            width: 100%;
-            max-width: 420px;
+            width: 80%;
+            max-width: 500px;
             border-collapse: collapse;
             background-color: #f9f9f9;
             border-radius: 12px;
+            overflow: hidden;
         }
 
         .shortcuts-table th, .shortcuts-table td {
@@ -83,10 +87,11 @@
 
         .disclaimer {
             margin-top: 20px;
-            text-align: left;
             font-size: 0.9rem;
             color: white;
-            width: 45%;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
         }
 
         /* Responsive Styles */
@@ -98,6 +103,7 @@
             .search-box {
                 font-size: 1rem;
                 padding: 10px;
+                height: 45px;
             }
 
             .shortcuts-table th, .shortcuts-table td {
@@ -105,8 +111,9 @@
                 padding: 8px;
             }
         }
+
         span {
-        	color: white;
+            color: white;
         }
     </style>
 </head>
@@ -139,10 +146,8 @@
         </tbody>
     </table>
 
-    <br>
-    <br>
     <div class="disclaimer">
-        <span>Please use Arch for non-progress-tracking related activities Please use responsibly.</span>
+        <span>Please use Arch for non-progress-tracking related activities. Use responsibly.</span>
     </div>
 
     <script>
