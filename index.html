@@ -9,25 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Questrial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Ensures content starts from top */
-            align-items: center;
-            height: 100vh;
-            overflow-y: auto; /* Allows scrolling if content overflows */
-            text-align: center;
+        font-family: 'Questrial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('Purple\ Gradient\ Background.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100vh;
+        overflow-y: auto;
+        text-align: center;
         }
 
         h1 {
-            font-size: 4rem;
+        	color: white;
+            font-size: 5em;
             margin-bottom: 20px;
         }
-
+        
+		::placeholder {
+        	font-size: 1.15rem;
+            color: black;
+        }
         .search-container {
             margin-top: 0;
             width: 100%;
@@ -36,26 +42,28 @@
         }
 
         .search-box {
+        	height: 30%;
             width: 100%;
             padding: 12px;
             font-size: 1.2rem;
-            border: 2px solid #ddd;
             border-radius: 8px;
             outline: none;
-            background-color: #f9f9f9;
+            border: none;
+            background-color: #f2f2f2;
         }
 
         .search-box:focus {
-            border-color: #0073e6;
+            border: 2px dashed #4b45ff;
         }
 
         .shortcuts-table {
+			margin-left: 22.5px;
             margin-top: 20px;
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             border-collapse: collapse;
             background-color: #f9f9f9;
-            border-radius: 8px;
+            border-radius: 12px;
         }
 
         .shortcuts-table th, .shortcuts-table td {
@@ -65,7 +73,7 @@
         }
 
         .shortcuts-table th {
-            background-color: #0073e6;
+            background-color: #4b45ff;
             color: white;
         }
 
@@ -73,15 +81,12 @@
             background-color: #f2f2f2;
         }
 
-        .shortcuts-table td {
-            border-bottom: 1px solid #ddd;
-        }
-
         .disclaimer {
             margin-top: 20px;
             text-align: left;
             font-size: 0.9rem;
-            color: #555;
+            color: white;
+            width: 45%;
         }
 
         /* Responsive Styles */
@@ -100,10 +105,13 @@
                 padding: 8px;
             }
         }
+        span {
+        	color: white;
+        }
     </style>
 </head>
 <body>
-    <h1>Arch</h1>
+    <strong><h1>arch</h1></strong>
     <div class="search-container">
         <input type="text" class="search-box" id="search-bar" placeholder="Search..." onkeydown="if(event.key === 'Enter') search()">
     </div>
@@ -134,7 +142,7 @@
     <br>
     <br>
     <div class="disclaimer">
-        <span>We recommend avoiding the use of Arch for programs that rely on progress tracking, as sessions are not saved to prioritize privacy.<br>Arch is NOT responsible for any impact it may have on your experience. We ask that you refrain from using Arch in ways it was not designed for.</span>
+        <span>We advise against using Arch for progress-tracking programs, as sessions aren't saved for privacy. Arch is not responsible for any impact on your experience. Please use it as intended.</span>
     </div>
 
     <script>
