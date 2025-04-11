@@ -91,6 +91,37 @@
             background-color: #f2f2f2;
         }
 
+        .quick-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .icon-button {
+            background: white;
+            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+
+        .icon-button:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-button img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+        }
+
         .disclaimer {
             margin-top: 20px;
             font-size: 0.9rem;
@@ -100,7 +131,6 @@
             text-align: center;
         }
 
-        /* Responsive Styles */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
@@ -153,11 +183,26 @@
             </tbody>
         </table>
 
-        <div class="disclaimer">
-        <a style="text-decoration: none;" href="https://sites.google.com/view/archbrowser/terms-of-service?authuser=1">
-            <span>Please use Arch responsibly. Click here to view the terms of service.</span>
+        <div class="quick-links">
+            <a href="https://chat.openai.com/" class="icon-button" title="ChatGPT">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg" alt="ChatGPT">
+            </a>
+            <a href="https://docs.google.com" class="icon-button" title="Google Docs">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledocs.svg" alt="Google Docs">
+            </a>
+            <a href="https://deepseek.com" class="icon-button" title="DeepSeek">
+                <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png" alt="DeepSeek">
+            </a>
+            <a href="https://polytrack.xyz" class="icon-button" title="Polytrack">
+                <img src="https://polytrack.xyz/favicon.ico" alt="Polytrack">
+            </a>
         </div>
-        </a>
+
+        <div class="disclaimer">
+            <a style="text-decoration: none;" href="https://sites.google.com/view/archbrowser/terms-of-service?authuser=1">
+                <span>Please use Arch responsibly. Click here to view the terms of service.</span>
+            </a>
+        </div>
     </div>
 
     <script>
